@@ -9,7 +9,6 @@ import OverLappingCards2 from "../components/homepage/OverLappingCards2";
 import ImpactSection from "../components/homepage/ImpactSection";
 import TestimonialSection from "../components/homepage/TestimonialSection";
 import NewsLetterPlusHowCards from "../components/homepage/NewsLetterPlusHowCards";
-// import HorizontalScrollComponent from "../components/homepage/HorizontalScrollComponent";
 
 const HomePage: React.FC = () => {
   return (
@@ -21,7 +20,6 @@ const HomePage: React.FC = () => {
       <HowSection />
       <OverLappingCards2 />
       <ImpactSection />
-      {/* <HorizontalScrollComponent /> */}
       <CloudSection />
       <TestimonialSection />
       <NewsLetterPlusHowCards />
