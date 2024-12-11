@@ -2,7 +2,7 @@ import React from "react";
 
 const WorkCloud: React.FC = () => {
   return (
-    <div className="bg-gray-50 py-10 px-6 lg:px-20">
+    <div className="lg:hidden block bg-gray-50 py-10 px-6 lg:px-20">
       {/* Title Section */}
       <div className="text-center lg:text-left mb-10">
         <h1 className="text-3xl lg:text-5xl font-bold text-gray-800 leading-snug">

@@ -40,16 +40,16 @@ const Customers: React.FC = () => {
   };
 
   return (
-    <div className="bg-white py-10 px-6 lg:px-12 flex flex-col items-center gap-y-8">
+    <div className="bg-purple-900 py-10 px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-y-8">
       {/* Header section */}
-      <div className="text-center">
-        <h2 className="text-2xl lg:text-4xl font-bold">
-          Join <span className="text-orange-500">100+</span> satisfied customers
+      <div className="text-left w-full lg:w-1/2">
+        <h2 className="text-2xl text-white lg:text-4xl font-bold">
+          Join <span className="text-orange-500">100+</span> <br />satisfied customers
         </h2>
       </div>
 
       {/* Slider section */}
-      <div className="w-full max-w-7xl">
+      <div className="w-full lg:w-1/2 max-w-7xl">
         <Slider {...settings} className="gap-x-4">
           {/* Example logo items */}
           <div className="px-4">
