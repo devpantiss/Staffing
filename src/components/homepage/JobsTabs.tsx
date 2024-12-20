@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import animation from "../../assets/experience.json";
-import worker from '../../assets/work.json';
+import worker from "../../assets/work.json";
 const JobTabs: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("skilledWorkers");
 
@@ -175,9 +175,7 @@ const JobTabs: React.FC = () => {
           )}
 
           {activeTab === "businesses" && (
-            <div
-              className="grid grid-cols-1 lg:grid-cols-2 gap-8"
-            >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Form Section */}
               <div
                 className="bg-white p-6 shadow rounded-lg grid gap-4"
@@ -227,14 +225,104 @@ const JobTabs: React.FC = () => {
               </div>
 
               {/* Lottie Animation */}
-              <div className="hidden lg:block sticky top-8 h-[400px] justify-center items-center"
-                   style={{
-                        backgroundImage: `url('https://res.cloudinary.com/dgtc2fvgu/image/upload/v1730547765/rb_4719_zaopt2.png')`,
-                        backgroundSize: "fit",
-                        backgroundColor: "#f9f9f9",
-                        borderRadius: "15px",
-                      }}
+              <div
+                className="hidden lg:block sticky top-8 h-[400px] justify-center items-center"
+                // style={{
+                //   backgroundImage: `url('https://res.cloudinary.com/dgtc2fvgu/image/upload/v1730547765/rb_4719_zaopt2.png')`,
+                //   backgroundSize: "fit",
+                //   backgroundColor: "#f9f9f9",
+                //   borderRadius: "15px",
+                // }}
               >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="88"
+                  height="88"
+                  viewBox="0 0 88 88"
+                  fill="none"
+                  className="absolute -right-6 -top-6 w-8 h-8 lg:w-16 lg:h-16"
+                >
+                  <path
+                    d="M88 88V43.9944V0H44.0056H0V43.9944H44.0056V88H88Z"
+                    fill="#D6DDCD"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="290"
+                  height="305"
+                  viewBox="0 0 290 305"
+                  fill="none"
+                  className="absolute -right-0 top-0 w-8 h-8 lg:w-72 lg:h-72"
+                >
+                  <path
+                    d="M289.5 289V144.5V0H144.979H0.5V144.5H144.979V289H289.5Z"
+                    fill="#D76041"
+                  ></path>
+                  <line
+                    x1="187.363"
+                    y1="2.5"
+                    x2="187.363"
+                    y2="302.5"
+                    stroke="#D6DDCD"
+                    stroke-width="5"
+                    stroke-linecap="round"
+                  ></line>
+                  <line
+                    x1="240.6"
+                    y1="2.5"
+                    x2="240.6"
+                    y2="302.5"
+                    stroke="#D6DDCD"
+                    stroke-width="5"
+                    stroke-linecap="round"
+                  ></line>
+                  <line
+                    x1="189.645"
+                    y1="60.9077"
+                    x2="237.881"
+                    y2="60.9077"
+                    stroke="#D6DDCD"
+                    stroke-width="5"
+                    stroke-linecap="round"
+                  ></line>
+                  <line
+                    x1="189.645"
+                    y1="108.263"
+                    x2="237.881"
+                    y2="108.263"
+                    stroke="#D6DDCD"
+                    stroke-width="5"
+                    stroke-linecap="round"
+                  ></line>
+                  <line
+                    x1="189.645"
+                    y1="155.619"
+                    x2="237.881"
+                    y2="155.619"
+                    stroke="#D6DDCD"
+                    stroke-width="5"
+                    stroke-linecap="round"
+                  ></line>
+                  <line
+                    x1="189.645"
+                    y1="202.973"
+                    x2="237.881"
+                    y2="202.973"
+                    stroke="#D6DDCD"
+                    stroke-width="5"
+                    stroke-linecap="round"
+                  ></line>
+                  <line
+                    x1="189.645"
+                    y1="250.329"
+                    x2="237.881"
+                    y2="250.329"
+                    stroke="#D6DDCD"
+                    stroke-width="5"
+                    stroke-linecap="round"
+                  ></line>
+                </svg>
                 <Player
                   autoplay
                   loop
@@ -247,12 +335,12 @@ const JobTabs: React.FC = () => {
 
           {activeTab === "nanoContractors" && (
             <div className="text-center flex flex-col justify-center items-center">
-                 <Player
-                  autoplay
-                  loop
-                  src={worker}
-                  style={{ height: "450px", width: "500px" }}
-                />
+              <Player
+                autoplay
+                loop
+                src={worker}
+                style={{ height: "450px", width: "500px" }}
+              />
               <p>Content for Nano-Contractors goes here...</p>
             </div>
           )}
