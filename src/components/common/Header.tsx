@@ -17,14 +17,33 @@ const Header: React.FC = () => {
 
         {/* Navigation Links */}
         <nav className="flex space-x-6 text-gray-800">
-          <a href="#" className="text-orange-600 border-b-2 border-orange-600 pb-1">Home</a>
-          <a href="#" className="hover:text-orange-600">For Businesses</a>
-          <a href="#" className="hover:text-orange-600">For Nano-contractors</a>
-          <a href="#" className="hover:text-orange-600">For Workers</a>
-          <a href="#" className="hover:text-orange-600">For Learners</a>
-          <a href="#" className="hover:text-orange-600">Our Expertise</a>
-          <a href="#" className="hover:text-orange-600">Careers</a>
-          <a href="#" className="hover:text-orange-600">About Us</a>
+          <a
+            href="#"
+            className="text-orange-600 border-b-2 border-orange-600 pb-1"
+          >
+            Home
+          </a>
+          <a href="/businesses" className="hover:text-orange-600">
+            For Businesses
+          </a>
+          <a href="/nano-contractors" className="hover:text-orange-600">
+            For Nano-contractors
+          </a>
+          <a href="#" className="hover:text-orange-600">
+            For Workers
+          </a>
+          <a href="#" className="hover:text-orange-600">
+            For Learners
+          </a>
+          <a href="#" className="hover:text-orange-600">
+            Our Expertise
+          </a>
+          <a href="#" className="hover:text-orange-600">
+            Careers
+          </a>
+          <a href="#" className="hover:text-orange-600">
+            About Us
+          </a>
         </nav>
       </div>
 
@@ -78,13 +97,13 @@ const Header: React.FC = () => {
             Home
           </a>
           <a
-            href="#"
+            href="/businesses"
             className="block lg:inline hover:text-orange-600 mt-2 lg:mt-0"
           >
             For Businesses
           </a>
           <a
-            href="#"
+            href="/nano-contractors"
             className="block lg:inline hover:text-orange-600 mt-2 lg:mt-0"
           >
             For Nano-contractors
