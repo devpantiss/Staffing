@@ -6,6 +6,7 @@ import InsightsSection from '../components/nanoContractors/Insights'
 import Stats from '../components/nanoContractors/Stats'
 import Testimonials from '../components/nanoContractors/Testimonials'
 import NewsSection from '../components/nanoContractors/NewsSection'
+import NewsLetterPlusHowCards from '../components/homepage/NewsLetterPlusHowCards'
 
 const NanoContractors: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const NanoContractors: React.FC = () => {
         <Stats />
         <Testimonials />
         <NewsSection />
+        <NewsLetterPlusHowCards />
     </div>
   )
 }

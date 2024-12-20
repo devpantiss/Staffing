@@ -1,11 +1,27 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const isActive = (path: string) => location.pathname === path;
+
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "For Businesses", path: "/for-businesses" },
+    { name: "For Nano-contractors", path: "/for-nano-contractors" },
+    { name: "For Workers", path: "/for-workers" },
+    { name: "For Learners", path: "#" },
+    { name: "Our Expertise", path: "#" },
+    { name: "Careers", path: "#" },
+    { name: "About Us", path: "#" },
+  ];
+
   return (
     <header className="bg-white shadow-md">
       <div className="lg:flex hidden container mx-auto items-center justify-between py-4 px-6">
@@ -16,17 +32,17 @@ const Header: React.FC = () => {
         </div>
 
         {/* Navigation Links */}
-        <nav className="flex space-x-6 text-gray-800">
+        {/* <nav className="flex space-x-6 text-gray-800">
           <a
-            href="#"
+            href="/"
             className="text-orange-600 border-b-2 border-orange-600 pb-1"
           >
             Home
           </a>
-          <a href="/businesses" className="hover:text-orange-600">
+          <a href="/for-businesses" className="hover:text-orange-600">
             For Businesses
           </a>
-          <a href="/nano-contractors" className="hover:text-orange-600">
+          <a href="/for-nano-contractors" className="hover:text-orange-600">
             For Nano-contractors
           </a>
           <a href="#" className="hover:text-orange-600">
@@ -44,6 +60,23 @@ const Header: React.FC = () => {
           <a href="#" className="hover:text-orange-600">
             About Us
           </a>
+        </nav> */}
+
+        {/* nav */}
+        <nav>
+          {navLinks.map((tab) => (
+            <a
+              key={tab.name}
+              href={tab.path}
+              className={`pb-1 mx-2 ${
+                isActive(tab.path)
+                  ? "text-orange-600 border-b-2 border-orange-600"
+                  : "hover:text-orange-600"
+              }`}
+            >
+              {tab.name}
+            </a>
+          ))}
         </nav>
       </div>
 
@@ -90,54 +123,19 @@ const Header: React.FC = () => {
             isMenuOpen ? "translate-x-0" : "-translate-x-full"
           } lg:relative lg:translate-y-0 lg:flex lg:space-x-6 text-gray-800`}
         >
-          <a
-            href="#"
-            className="block lg:inline text-orange-600 border-b-2 border-orange-600 pb-1 lg:pb-0"
-          >
-            Home
-          </a>
-          <a
-            href="/businesses"
-            className="block lg:inline hover:text-orange-600 mt-2 lg:mt-0"
-          >
-            For Businesses
-          </a>
-          <a
-            href="/nano-contractors"
-            className="block lg:inline hover:text-orange-600 mt-2 lg:mt-0"
-          >
-            For Nano-contractors
-          </a>
-          <a
-            href="#"
-            className="block lg:inline hover:text-orange-600 mt-2 lg:mt-0"
-          >
-            For Workers
-          </a>
-          <a
-            href="#"
-            className="block lg:inline hover:text-orange-600 mt-2 lg:mt-0"
-          >
-            For Learners
-          </a>
-          <a
-            href="#"
-            className="block lg:inline hover:text-orange-600 mt-2 lg:mt-0"
-          >
-            Our Expertise
-          </a>
-          <a
-            href="#"
-            className="block lg:inline hover:text-orange-600 mt-2 lg:mt-0"
-          >
-            Careers
-          </a>
-          <a
-            href="#"
-            className="block lg:inline hover:text-orange-600 mt-2 lg:mt-0"
-          >
-            About Us
-          </a>
+          {navLinks.map((tab) => (
+            <a
+              key={tab.name}
+              href={tab.path}
+              className={`block lg:inline pb-1 mt-2 lg:mt-0 ${
+                isActive(tab.path)
+                  ? "text-orange-600 border-b-2 border-orange-600"
+                  : "hover:text-orange-600"
+              }`}
+            >
+              {tab.name}
+            </a>
+          ))}
         </nav>
       </div>
     </header>

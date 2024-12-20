@@ -4,6 +4,7 @@ import Hero from '../components/Bussiness/Hero'
 import AsSeenOn from '../components/common/AsSeenOn'
 import TestimonialSection from '../components/homepage/TestimonialSection'
 import Workers from '../components/Bussiness/Workers'
+import NewsLetterPlusHowCards from '../components/homepage/NewsLetterPlusHowCards'
 
 const Businesses: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const Businesses: React.FC = () => {
         <HorizontalComponent />
         <TestimonialSection />
         <Workers />
+        <NewsLetterPlusHowCards />
     </div>
   )
 }

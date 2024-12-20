@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import NanoContractors from "./pages/NanoContractors";
 import Businesses from "./pages/Businesses";
+import Workers from "./pages/Workers";
 
 
 function App() {
@@ -14,8 +15,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />}/>
-        <Route path="/nano-contractors" element={<NanoContractors />}/>
-        <Route path="/businesses" element={<Businesses />}/>
+        <Route path="/for-nano-contractors" element={<NanoContractors />}/>
+        <Route path="/for-businesses" element={<Businesses />}/>
+        <Route path="/for-workers" element={<Workers />}/>
       </Routes>
       <Footer />
       </Router>
