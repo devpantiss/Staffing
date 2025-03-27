@@ -37,19 +37,22 @@ const NewsSection: React.FC = () => {
       title: "Odisha Mining Expo 2025 Highlights Job Opportunities",
       description:
         "The third Odisha Mining and Infrastructure International Expo 2025 emphasized sustainable mining, with Governor Hari Babu Kambhampati noting the sector's role in driving employment. The event showcased new job opportunities for skilled workers in Odisha’s mineral-rich regions.",
-      imageUrl: "https://labournet.in/wp-content/uploads/2021/12/bengaluru-CAC-Vaccination-camp-CAC-Dec2021-800x438-1.jpg",
+      imageUrl:
+        "https://labournet.in/wp-content/uploads/2021/12/bengaluru-CAC-Vaccination-camp-CAC-Dec2021-800x438-1.jpg",
     },
     {
       title: "DMF Funds to Boost Employment in Mining Areas",
       description:
         "Odisha’s cabinet approved using District Mineral Foundation funds in a 5 km radius of mining areas, aiming to create jobs and improve livelihoods for families affected by mining, with a focus on comprehensive welfare and employment initiatives.",
-      imageUrl: "https://labournet.in/wp-content/uploads/2021/12/Rectangle-65.jpg",
+      imageUrl:
+        "https://labournet.in/wp-content/uploads/2021/12/Rectangle-65.jpg",
     },
     {
       title: "Odisha Budget 2025-26 Targets Mining Sector Growth",
       description:
         "The 2025-26 Odisha Budget, presented by CM Mohan Majhi, allocates funds to strengthen the mining sector, aiming to create more placements and support infrastructure development, with a focus on sustainable growth and job creation.",
-      imageUrl: "https://labournet.in/wp-content/uploads/2021/12/BL08BSYediyurappa02jpg.jpg",
+      imageUrl:
+        "https://labournet.in/wp-content/uploads/2021/12/BL08BSYediyurappa02jpg.jpg",
     },
   ];
 
@@ -92,4 +95,4 @@ const NewsSection: React.FC = () => {
   );
 };
 
-export default NewsSection;
+export default NewsSection
