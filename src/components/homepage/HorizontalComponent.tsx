@@ -47,21 +47,21 @@ const HorizontalScrollComponent: React.FC = () => {
         className="relative w-full h-full flex overflow-x-auto snap-x snap-mandatory z-10"
       >
         <div className="flex-shrink-0 w-screen h-full flex items-center justify-center text-white snap-start">
-          <div className="mt-4 w-1/2 h-screen bg-white flex flex-col justify-center items-center">
+          <div className="mt-4 w-1/2 h-screen bg-black flex flex-col justify-center items-center">
             <div className="max-w-lg flex flex-col justify-start items-start">
               <img
                 src="https://labournet.in/wp-content/uploads/2021/12/Group-93.png"
                 alt="logo"
                 className="h-12 w-12"
               />
-              <h1 className="text-black mt-2 text-2xl uppercase font-bold">AVAILABLE</h1>
-              <p className="text-black max-w-[350px] text-2xl text-left">
+              <h1 className="text-white mt-2 text-2xl uppercase font-bold">AVAILABLE</h1>
+              <p className="text-white max-w-[350px] text-2xl text-left">
                 Building supply in{" "}
-                <strong className="text-[#D76042]">350+ schools</strong> and{" "}
-                <strong className="text-[#D76042]">03 colleges,</strong> and
+                <strong className="text-purple-600">350+ schools</strong> and{" "}
+                <strong className="text-purple-600">03 colleges,</strong> and
                 connecting it to demand in{" "}
-                <strong className="text-[#D76042]">23 states</strong> and{" "}
-                <strong className="text-[#D76042]">5 union territories.</strong>
+                <strong className="text-purple-600">23 states</strong> and{" "}
+                <strong className="text-purple-600">5 union territories.</strong>
               </p>
             </div>
           </div>
@@ -75,21 +75,21 @@ const HorizontalScrollComponent: React.FC = () => {
         </div>
 
         <div className="flex-shrink-0 w-screen h-full flex items-center justify-center text-white snap-start">
-          <div className="mt-4 w-1/2 h-screen bg-white flex flex-col justify-center items-center">
+          <div className="mt-4 w-1/2 h-screen bg-black flex flex-col justify-center items-center">
             <div className="max-w-lg flex flex-col justify-start items-start">
               <img
                 src="https://labournet.in/wp-content/uploads/2021/12/Home_Reliable_Icon.png"
                 alt="logo"
                 className="h-12 w-12"
               />
-              <h1 className="text-black mt-2 text-2xl uppercase font-bold">Reliable</h1>
-              <p className="text-black max-w-[350px] text-2xl text-left">
-                <strong className="text-[#D76042]">12+ years</strong> of work to
-                <strong className="text-[#D76042]">uplift,</strong> informal
+              <h1 className="text-white mt-2 text-2xl uppercase font-bold">Reliable</h1>
+              <p className="text-white max-w-[350px] text-2xl text-left">
+                <strong className="text-purple-600">12+ years</strong> of work to
+                <strong className="text-purple-600">uplift,</strong> informal
                 workers,
-                <strong className="text-[#D76042]">grow real wages</strong> and
+                <strong className="text-purple-600">grow real wages</strong> and
                 enable{" "}
-                <strong className="text-[#D76042]">
+                <strong className="text-purple-600">
                   decent working conditions.
                 </strong>
               </p>
@@ -105,23 +105,23 @@ const HorizontalScrollComponent: React.FC = () => {
         </div>
 
         <div className="flex-shrink-0 w-screen h-full flex items-center justify-center text-white snap-start">
-          <div className="mt-4 w-1/2 h-screen bg-white flex flex-col justify-center items-center">
+          <div className="mt-4 w-1/2 h-screen bg-black flex flex-col justify-center items-center">
             <div className="max-w-lg flex flex-col justify-start items-start">
               <img
                 src="https://labournet.in/wp-content/uploads/2021/12/Home_Innovative_Icon.png"
                 alt="logo"
                 className="h-12 w-12"
               />
-              <h1 className="text-black mt-2 uppercase text-2xl font-bold">INNOVATIVE</h1>
-              <p className="text-black max-w-[350px] text-2xl text-left">
+              <h1 className="text-white mt-2 uppercase text-2xl font-bold">INNOVATIVE</h1>
+              <p className="text-white max-w-[350px] text-2xl text-left">
                 Pioneer in{" "}
-                <strong className="text-[#D76042]">
+                <strong className="text-purple-600">
                   Vocational EdTech, Mobile Micro-learning
                 </strong>{" "}
                 for Blue-Collar Trades,{" "}
-                <strong className="text-[#D76042]">B2B2C Gig-staffing</strong>{" "}
+                <strong className="text-purple-600">B2B2C Gig-staffing</strong>{" "}
                 and
-                <strong className="text-[#D76042]">WCaaS technology.</strong>
+                <strong className="text-purple-600">WCaaS technology.</strong>
               </p>
             </div>
           </div>
@@ -135,20 +135,20 @@ const HorizontalScrollComponent: React.FC = () => {
         </div>
 
         <div className="flex-shrink-0 w-screen h-full flex items-center justify-center text-white snap-start">
-          <div className="mt-4 w-1/2 h-screen bg-white flex flex-col justify-center items-center">
+          <div className="mt-4 w-1/2 h-screen bg-black flex flex-col justify-center items-center">
             <div className="max-w-lg flex flex-col justify-start items-start">
               <img
                 src="https://labournet.in/wp-content/uploads/2021/12/Home_Efficient_Icon.png"
                 alt="logo"
                 className="h-12 w-12"
               />
-              <h1 className="text-black mt-2 text-2xl uppercase font-bold">
+              <h1 className="text-white mt-2 text-2xl uppercase font-bold">
                 Efficient
               </h1>
-              <p className="text-black max-w-[350px] text-2xl text-left">
+              <p className="text-white max-w-[350px] text-2xl text-left">
                 Models built for{" "}
-                <strong className="text-[#D76042]">cost resilience</strong> and{" "}
-                <strong className="text-[#D76042]">capital efficiency.</strong>
+                <strong className="text-purple-600">cost resilience</strong> and{" "}
+                <strong className="text-purple-600">capital efficiency.</strong>
               </p>
             </div>
           </div>

@@ -26,10 +26,10 @@ const Testimonials: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-12">
+    <div className="bg-black py-12">
       {/* Title Section */}
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
-        <span className="text-orange-500">Nano-contractors</span> testimonials
+      <h2 className="text-3xl font-bold text-center text-gray-50 mb-8">
+        <span className="text-purple-500">Nano-contractors</span> testimonials
       </h2>
 
       {/* Testimonials */}
@@ -37,9 +37,9 @@ const Testimonials: React.FC = () => {
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="bg-gray-100 rounded-lg shadow-md p-6 max-w-md"
+            className="bg-gray-100/50 rounded-lg shadow-md p-6 max-w-md"
           >
-            <p className="text-gray-700 italic mb-6">"{testimonial.message}"</p>
+            <p className="text-gray-50 italic mb-6">"{testimonial.message}"</p>
             <div className="flex items-center">
               <img
                 src={testimonial.image}
@@ -47,8 +47,8 @@ const Testimonials: React.FC = () => {
                 className="w-12 h-12 rounded-full mr-4"
               />
               <div>
-                <p className="font-bold text-gray-800">{testimonial.name}</p>
-                <p className="text-gray-500 text-sm">{testimonial.location}</p>
+                <p className="font-bold text-gray-100">{testimonial.name}</p>
+                <p className="text-gray-50 text-sm">{testimonial.location}</p>
               </div>
             </div>
           </div>
@@ -57,8 +57,8 @@ const Testimonials: React.FC = () => {
 
       {/* CTA Section */}
       <div className="text-center mt-12">
-        <h3 className="text-2xl font-bold text-gray-800">Start Growing</h3>
-        <button className="bg-orange-500 text-white py-2 px-6 rounded-md mt-4 hover:bg-orange-600">
+        <h3 className="text-2xl font-bold text-gray-50">Start Growing</h3>
+        <button className="bg-purple-500 text-white py-2 px-6 rounded-md mt-4 hover:bg-purple-600">
           Contact Us
         </button>
       </div>

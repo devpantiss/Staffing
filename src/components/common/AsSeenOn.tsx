@@ -40,10 +40,10 @@ const AsSeenOn: React.FC = () => {
   };
 
   return (
-    <div className="bg-white py-10 px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-y-8">
+    <div className="bg-purple-900 py-10 px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-y-8">
       {/* Header section */}
       <div className="relative text-left w-full lg:w-1/2">
-        <h2 className="text-2xl text-black lg:text-4xl font-bold relative inline-block">
+        <h2 className="text-2xl text-white lg:text-4xl font-bold relative inline-block">
           As <span className="text-orange-500">Seen</span> On
           <svg
             xmlns="http://www.w3.org/2000/svg"

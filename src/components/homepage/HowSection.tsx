@@ -8,11 +8,11 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ icon, title, description }) => {
   return (
-    <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center">
+    <div className="bg-black shadow-md rounded-lg p-6 flex flex-col items-center text-center">
       <div className="mb-4">{icon}</div>
-      <h3 className="text-lg font-semibold text-orange-600 mb-2">{title}</h3>
-      <p className="text-gray-700 mb-4">{description}</p>
-      <div className="h-1 w-16 bg-orange-600 self-center"></div>
+      <h3 className="text-lg font-semibold text-purple-600 mb-2">{title}</h3>
+      <p className="text-gray-200 mb-4">{description}</p>
+      <div className="h-1 w-16 bg-purple-600 self-center"></div>
     </div>
   );
 };

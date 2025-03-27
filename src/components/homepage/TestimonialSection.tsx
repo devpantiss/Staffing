@@ -27,7 +27,7 @@ const testimonials = [
 
 const TestimonialSection: React.FC = () => {
   return (
-    <section className="bg-gradient-to-b from-purple-900 via-white to-white py-16">
+    <section className="bg-gradient-to-b from-purple-900 via-black to-black py-16">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-white text-center mb-12">
           Trusted by the <span className="text-[#FF6A3D]">Best</span>
@@ -48,7 +48,7 @@ const TestimonialSection: React.FC = () => {
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-gray-800 italic mb-6">"{testimonial.text}"</p>
+              <p className="text-gray-50 italic mb-6">"{testimonial.text}"</p>
 
               {/* User Details */}
               <div className="flex items-center mt-auto">
@@ -60,8 +60,8 @@ const TestimonialSection: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <p className="font-bold text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600">
+                  <p className="font-bold text-white">{testimonial.name}</p>
+                  <p className="text-sm text-gray-200">
                     {testimonial.designation}
                   </p>
                 </div>

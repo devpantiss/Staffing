@@ -23,9 +23,9 @@ const InsightsSection: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-12">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
-        Engage with <span className="text-orange-500">Insights</span>
+    <div className="bg-black py-12">
+      <h2 className="text-3xl font-bold text-center text-gray-50 mb-8">
+        Engage with <span className="text-purple-500">Insights</span>
       </h2>
       <div className="flex flex-wrap justify-center gap-8">
         {data.map((card, index) => (
@@ -36,7 +36,7 @@ const InsightsSection: React.FC = () => {
                 backgroundImage: `url(${card.image})`
             }}
           >
-            <h3 className="text-xl font-bold text-orange-600 mb-4">
+            <h3 className="text-xl font-bold text-purple-600 mb-4">
               {card.title}
             </h3>
             <p className="text-gray-700 mb-4">{card.description}</p>

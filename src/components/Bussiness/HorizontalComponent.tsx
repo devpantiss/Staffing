@@ -34,23 +34,37 @@ const HorizontalScrollComponent: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-purple-900 py-8 px-6">
-      <h1 className="text-4xl lg:ml-[200px] lg:max-w-[300px] max-w-full text-white font-bold">
-        <p className="text-orange-400">Four ways</p> to work with LabourNet
-      </h1>
+    <div className="relative w-screen h-screen overflow-hidden bg-black py-8 px-6">
+      {/* Background Video */}
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        autoPlay
+        loop
+        muted
+        playsInline
+        aria-hidden="true"
+      >
+        <source
+          src="https://res.cloudinary.com/dgtc2fvgu/video/upload/v1742994020/2759477-uhd_3840_2160_30fps_zxnpip.mp4" // Replace with your actual video URL
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
 
-      {/* Background overlay */}
-      <div
-        className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-0"
-        style={{ backgroundImage: 'url("/path-to-your-background.jpg")' }}
-      ></div>
+      {/* Dark Overlay for Text Visibility */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black/20 z-0"></div>
+
+      {/* Heading with Higher z-index */}
+      <h1 className="relative text-4xl lg:ml-[200px] lg:max-w-[300px] max-w-full text-white font-bold z-20">
+        <p className="text-purple-600">Four ways</p> to work with LabourNet
+      </h1>
 
       {/* Horizontal Scroll Content */}
       <div
         ref={containerRef}
         className="relative w-full h-full flex overflow-x-auto snap-x snap-mandatory z-10"
       >
-        <div className="flex-shrink-0 w-screen h-full flex items-center justify-center bg-purple-900 text-white snap-start">
+        <div className="flex-shrink-0 w-screen h-full flex items-center justify-center bg-transparent text-white snap-start">
           <div className="flex gap-x-6 flex-col lg:flex-row justify-center items-center text-center">
             <div>
               <img
@@ -78,7 +92,7 @@ const HorizontalScrollComponent: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex-shrink-0 w-screen h-full flex items-center justify-center bg-purple-900 text-white snap-start">
+        <div className="flex-shrink-0 w-screen h-full flex items-center justify-center bg-transparent text-white snap-start">
           <div className="flex gap-x-6 flex-col lg:flex-row justify-center items-center text-center">
             <div>
               <img
@@ -104,7 +118,7 @@ const HorizontalScrollComponent: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex-shrink-0 w-screen h-full flex items-center justify-center bg-purple-900 text-white snap-start">
+        <div className="flex-shrink-0 w-screen h-full flex items-center justify-center bg-transparent text-white snap-start">
           <div className="flex gap-x-6 flex-col lg:flex-row justify-center items-center text-center">
             <div>
               <img
@@ -127,7 +141,7 @@ const HorizontalScrollComponent: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex-shrink-0 w-screen h-full flex items-center justify-center bg-purple-900 text-white snap-start">
+        <div className="flex-shrink-0 w-screen h-full flex items-center justify-center bg-transparent text-white snap-start">
           <div className="flex gap-x-6 flex-col lg:flex-row justify-center items-center text-center">
             <div>
               <img
