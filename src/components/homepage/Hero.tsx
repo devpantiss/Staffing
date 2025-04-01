@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 const HeroSection: React.FC = () => {
   return (
@@ -66,15 +68,15 @@ const HeroSection: React.FC = () => {
             <span className="text-purple-600">three powerful tools.</span>
           </h2>
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-            <button className="px-6 py-3 bg-black/80 border border-purple-600/50 text-white font-medium rounded-md hover:bg-purple-600/20-hover transition-all duration-300">
+            <Link to="/academics" className="px-6 py-3 bg-black/80 border border-purple-600/50 text-white font-medium rounded-md hover:bg-purple-600/20-hover transition-all duration-300">
               Academics
-            </button>
-            <button className="px-6 py-3 bg-black/80 border border-purple-600/50 text-white font-medium rounded-md hover:bg-purple-600/20-hover transition-all duration-300">
+            </Link>
+            <Link to="/for-nano-contractors" className="px-6 py-3 bg-black/80 border border-purple-600/50 text-white font-medium rounded-md hover:bg-purple-600/20-hover transition-all duration-300">
               Counseling
-            </button>
-            <button className="px-6 py-3 bg-black/80 border border-purple-600/50 text-white font-medium rounded-md hover:bg-purple-600/20-hover transition-all duration-300">
+            </Link>
+            <Link to="/job-search-engine" className="px-6 py-3 bg-black/80 border border-purple-600/50 text-white font-medium rounded-md hover:bg-purple-600/20-hover transition-all duration-300">
               Job Search Engine
-            </button>
+            </Link>
           </div>
         </div>
 

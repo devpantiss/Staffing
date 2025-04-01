@@ -1,4 +1,6 @@
 import React, { memo } from "react";
+import { Link } from "react-router-dom";
+
 
 // Memoized HeroSection to prevent unnecessary re-renders
 const HeroSection: React.FC = memo(() => {
@@ -65,15 +67,15 @@ const HeroSection: React.FC = memo(() => {
             to <span className="text-purple-600">get work done.</span>
           </h2>
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-            <button className="px-6 py-3 bg-black/80 border border-purple-600/50 text-white font-medium rounded-md hover:bg-purple-600/20 transition-all duration-300">
+            <Link to="/for-businesses" className="px-6 py-3 bg-black/80 border border-purple-600/50 text-white font-medium rounded-md hover:bg-purple-600/20 transition-all duration-300">
               For Businesses
-            </button>
-            <button className="px-6 py-3 bg-black/80 border border-purple-600/50 text-white font-medium rounded-md hover:bg-purple-600/20 transition-all duration-300">
+            </Link>
+            {/* <Link className="px-6 py-3 bg-black/80 border border-purple-600/50 text-white font-medium rounded-md hover:bg-purple-600/20 transition-all duration-300">
               For Nano-Contractors
-            </button>
-            <button className="px-6 py-3 bg-black/80 border border-purple-600/50 text-white font-medium rounded-md hover:bg-purple-600/20 transition-all duration-300">
+            </Link>
+            <Link className="px-6 py-3 bg-black/80 border border-purple-600/50 text-white font-medium rounded-md hover:bg-purple-600/20 transition-all duration-300">
               For Skilled Workers
-            </button>
+            </Link> */}
           </div>
         </div>
 
