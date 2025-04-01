@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import animation from "../../assets/experience.json";
 import worker from "../../assets/work.json";
@@ -346,7 +346,7 @@ const JobTabs: React.FC = () => {
               </div>
 
               {/* Lottie Animation */}
-              <div className="hidden lg:block sticky top-8 h-[450px] flex justify-center items-center">
+              <div className="hidden lg:block sticky top-8 h-[450px] justify-center items-center">
                 <div className="relative">
                   {/* SVG Decorations */}
                   <svg

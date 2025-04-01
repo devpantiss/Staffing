@@ -90,7 +90,7 @@ const HeroSection: React.FC = memo(() => {
       </div>
 
       {/* Scoped CSS for Futuristic Design */}
-      <style jsx>{`
+      <style>{`
         /* Purple Color Definitions */
         :root {
           --purple-600: #9333ea;

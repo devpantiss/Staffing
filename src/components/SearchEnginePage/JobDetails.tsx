@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 // Define the Job interface for TypeScript
 interface Job {
@@ -83,7 +83,7 @@ const socialLinks = [
 
 const JobDetails: React.FC = () => {
   // In a real app, fetch job data using useParams and an API
-  const { id } = useParams<{ id: string }>();
+  // const { id } = useParams<{ id: string }>();
   const job = jobData; // Replace with API fetch based on id
 
   if (!job) {
