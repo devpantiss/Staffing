@@ -19,13 +19,9 @@ const Header: React.FC = () => {
 
   const navLinks: NavLink[] = [
     { name: "Home", path: "/" },
-    { name: "For Businesses", path: "/for-businesses" },
-    { name: "For Nano-contractors", path: "/for-nano-contractors" },
-    { name: "For Workers", path: "/for-workers" },
-    { name: "For Learners", path: "#" },
-    { name: "Our Expertise", path: "#" },
-    { name: "Careers", path: "#" },
-    { name: "About Us", path: "#" },
+    { name: "Academics", path: "/academics" },
+    { name: "Jobs Engine", path: "/job-search-engine"},
+    { name: "Counselling", path: "/for-nano-contractors" },
   ];
 
   return (

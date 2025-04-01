@@ -6,6 +6,10 @@ import HomePage from "./pages/HomePage";
 import NanoContractors from "./pages/NanoContractors";
 import Businesses from "./pages/Businesses";
 import Workers from "./pages/Workers";
+import SearchEnginePage from "./pages/SearchEnginePage"
+import JobDetails from "./components/SearchEnginePage/JobDetails";
+import Academics from "./pages/Academics";
+import JobListPage from "./pages/JobListingPage";
 
 
 function App() {
@@ -18,6 +22,10 @@ function App() {
         <Route path="/for-nano-contractors" element={<NanoContractors />}/>
         <Route path="/for-businesses" element={<Businesses />}/>
         <Route path="/for-workers" element={<Workers />}/>
+        <Route path="/job-search-engine" element={<SearchEnginePage />}/>
+        <Route path="/job-details" element={<JobDetails />}/>
+        <Route path="/academics" element={<Academics />}/>
+        <Route path="/job-listings" element={<JobListPage />}/>
       </Routes>
       <Footer />
       </Router>

@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="relative mt-12 text-white overflow-hidden">
+    <div className="relative mt-16 text-white h-[600px] overflow-hidden">
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
         aria-hidden="true"
       >
         <source
-          src="https://res.cloudinary.com/dgtc2fvgu/video/upload/v1742991998/856953-uhd_4096_2160_25fps_vuuc1b.mp4" // Replace with your actual video URL
+          src="https://res.cloudinary.com/dgtc2fvgu/video/upload/v1742991998/856953-uhd_4096_2160_25fps_vuuc1b.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
@@ -25,64 +25,67 @@ const HeroSection: React.FC = () => {
       {/* Content */}
       <div className="relative flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12 px-8 py-16">
         {/* Left Section: Text, Form, and Buttons */}
-        <div className="md:w-1/2 flex flex-col justify-center space-y-6 animate-fade-in">
+        <div className="lg:w-1/2 flex flex-col justify-center space-y-6 animate-fade-in">
           {/* Upper Section: Job Search */}
           <div className="flex flex-col space-y-4">
             <h1 className="text-4xl lg:text-5xl text-center lg:text-left font-bold text-white">
-              Find the best job near you
+              Your Path to Success Starts Here
             </h1>
             <p className="text-lg text-center lg:text-left text-gray-300">
-              42,228+ active job vacancies to grab
+              Explore Academics, Counseling, and Job Search – All in One Place
             </p>
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+            {/* <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <select
                 className="px-4 py-2 rounded-md bg-black/80 border border-purple-600/50 text-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600-hover transition-all duration-300"
                 aria-label="Select Job Role"
               >
                 <option>Select Job Role</option>
-                <option>Software Engineer</option>
-                <option>Project Manager</option>
+                <option>Research Assistant</option>
+                <option>Teaching Assistant</option>
+                <option>Academic Counselor</option>
+                <option>Intern (Academic Projects)</option>
               </select>
               <select
                 className="px-4 py-2 rounded-md bg-black/80 border border-purple-600/50 text-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600-hover transition-all duration-300"
                 aria-label="Select City"
               >
                 <option>Select City</option>
-                <option>Bangalore</option>
-                <option>Mumbai</option>
+                <option>Delhi</option>
+                <option>Hyderabad</option>
+                <option>Pune</option>
               </select>
               <button className="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md transition-all duration-300">
-                Search
+                Search Jobs
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Lower Section: Key Features */}
           <h2 className="text-3xl lg:text-4xl text-center lg:text-left font-bold text-white">
-            Discover a new way <br />
-            to <span className="text-purple-600">get work done.</span>
+            Unlock your potential with <br />
+            <span className="text-purple-600">three powerful tools.</span>
           </h2>
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
             <button className="px-6 py-3 bg-black/80 border border-purple-600/50 text-white font-medium rounded-md hover:bg-purple-600/20-hover transition-all duration-300">
-              For Businesses
+              Academics
             </button>
             <button className="px-6 py-3 bg-black/80 border border-purple-600/50 text-white font-medium rounded-md hover:bg-purple-600/20-hover transition-all duration-300">
-              For Nano-Contractors
+              Counseling
             </button>
             <button className="px-6 py-3 bg-black/80 border border-purple-600/50 text-white font-medium rounded-md hover:bg-purple-600/20-hover transition-all duration-300">
-              For Skilled Workers
+              Job Search Engine
             </button>
           </div>
         </div>
 
         {/* Right Section: Image */}
-        <div className="md:w-1/2 flex justify-center items-center animate-fade-in">
-          <img
-            src="https://labournet.in/wp-content/uploads/2021/12/HomeBanner_warehouseManager_LowRes-2-1.png"
-            alt="Skilled Worker in a warehouse"
+        <div className="lg:w-1/2 flex justify-center items-center animate-fade-in">
+          {/* <img
+            src="https://res.cloudinary.com/dgtc2fvgu/image/upload/v1742993943/academic_counseling_job_search_hero_image_jpg.jpg" // Placeholder for an academic/counseling/job search-related image
+            alt="Student receiving career counseling for academic job opportunities"
             className="w-full max-w-md rounded-lg shadow-lg"
             loading="lazy"
-          />
+          /> */}
         </div>
       </div>
 

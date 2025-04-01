@@ -12,14 +12,13 @@ const HorizontalScrollComponent: React.FC = () => {
       const { scrollLeft, scrollWidth, clientWidth } = container;
 
       if (isHorizontalScroll) {
-        // Allow horizontal scrolling only when inside the component
         if (
-          !(scrollLeft === 0 && event.deltaY < 0) && // At the start and scrolling up
-          !(scrollLeft + clientWidth === scrollWidth && event.deltaY > 0) // At the end and scrolling down
+          !(scrollLeft === 0 && event.deltaY < 0) &&
+          !(scrollLeft + clientWidth === scrollWidth && event.deltaY > 0)
         ) {
-          event.preventDefault(); // Prevent vertical scrolling
+          event.preventDefault();
           container.scrollBy({
-            left: event.deltaY, // Scroll horizontally
+            left: event.deltaY,
             behavior: "smooth",
           });
         }
@@ -34,7 +33,7 @@ const HorizontalScrollComponent: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-black py-8 px-6">
+    <div className="relative w-screen h-[90vh] overflow-hidden bg-black py-8 px-6">
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
@@ -45,24 +44,24 @@ const HorizontalScrollComponent: React.FC = () => {
         aria-hidden="true"
       >
         <source
-          src="https://res.cloudinary.com/dgtc2fvgu/video/upload/v1742994020/2759477-uhd_3840_2160_30fps_zxnpip.mp4" // Replace with your actual video URL
+          src="https://res.cloudinary.com/dgtc2fvgu/video/upload/v1742994020/2759477-uhd_3840_2160_30fps_zxnpip.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
       </video>
 
       {/* Dark Overlay for Text Visibility */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black/20 z-0"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black via-purple-900/30 to-black bg-opacity-30 z-0"></div>
 
       {/* Heading with Higher z-index */}
       <h1 className="relative text-4xl lg:ml-[200px] lg:max-w-[300px] max-w-full text-white font-bold z-20">
-        <p className="text-purple-600">Four ways</p> to work with LabourNet
+        <p className="text-purple-600">Four ways</p> to hire top talent with SkillNet
       </h1>
 
       {/* Horizontal Scroll Content */}
       <div
         ref={containerRef}
-        className="relative w-full h-full flex overflow-x-auto snap-x snap-mandatory z-10"
+        className="relative w-full h-full flex overflow-x-auto snap-x snap-mandatory py-6 z-10"
       >
         <div className="flex-shrink-0 w-screen h-full flex items-center justify-center bg-transparent text-white snap-start">
           <div className="flex gap-x-6 flex-col lg:flex-row justify-center items-center text-center">
@@ -75,18 +74,17 @@ const HorizontalScrollComponent: React.FC = () => {
             </div>
             <div className="mt-4 lg:ml-8 flex flex-col justify-center items-center">
               <h1 className="text-2xl lg:text-4xl font-bold">
-                Grow, Digitize, and Automate
+                Source Elite Talent
               </h1>
               <p className="text-orange-400">
-                in 23 states, 5 union territories
+                across industries and geographies
               </p>
               <ul className="list-disc text-left mt-2">
-                <li>Contract and Temp Staffing</li>
-                <li>Payroll support and compliance</li>
-                <li>Hire-to-retire payroll automation</li>
-                <li>Onboarding at scale</li>
-                <li>Apprenticeship programs</li>
-                <li>Hire and train gig staff</li>
+                <li>Access to pre-vetted professionals</li>
+                <li>AI-driven talent matching</li>
+                <li>Multi-sector expertise</li>
+                <li>Rapid candidate shortlisting</li>
+                <li>Scalable hiring solutions</li>
               </ul>
             </div>
           </div>
@@ -103,16 +101,16 @@ const HorizontalScrollComponent: React.FC = () => {
             </div>
             <div className="mt-4 lg:ml-8 flex flex-col justify-center items-center">
               <h1 className="text-2xl lg:text-4xl font-bold">
-                Skill and Assess
+                Assess with Precision
               </h1>
               <p className="text-orange-400">
-                with AI-proctored assessment and hybrid learning{" "}
+                using cutting-edge evaluation tools
               </p>
               <ul className="list-disc text-left mt-2">
-                <li>Recognition of Prior Learning (RPL)</li>
-                <li>Skill Assessment</li>
-                <li>Instructor-led Blended Training </li>
-                <li>Micro-learning for Vocational Skills</li>
+                <li>Skill-based assessments</li>
+                <li>AI-proctored technical tests</li>
+                <li>Behavioral and aptitude evaluations</li>
+                <li>Customizable screening processes</li>
               </ul>
             </div>
           </div>
@@ -129,13 +127,14 @@ const HorizontalScrollComponent: React.FC = () => {
             </div>
             <div className="mt-4 lg:ml-8 flex flex-col justify-center items-center">
               <h1 className="text-2xl lg:text-4xl font-bold">
-                Engage Influencers
+                Engage Top Candidates
               </h1>
-              <p className="text-orange-400">with continuous engagement</p>
+              <p className="text-orange-400">with seamless interaction</p>
               <ul className="list-disc text-left mt-2">
-                <li>Integrate with existing loyalty programs</li>
-                <li>Bite-sized digital learning and engagement</li>
-                <li>Processes built to improve adoption</li>
+                <li>Automated interview scheduling</li>
+                <li>Real-time candidate feedback</li>
+                <li>Personalized engagement tools</li>
+                <li>Talent pipeline management</li>
               </ul>
             </div>
           </div>
@@ -151,13 +150,17 @@ const HorizontalScrollComponent: React.FC = () => {
               />
             </div>
             <div className="mt-4 lg:ml-8 flex flex-col justify-center items-center">
-              <h1 className="text-2xl lg:text-4xl font-bold">Get Work Done</h1>
+              <h1 className="text-2xl lg:text-4xl font-bold">
+                Hire with Confidence
+              </h1>
               <p className="text-orange-400">
-                with LabourNet’s WCaaS (Work Completion as a Service)
+                backed by data-driven insights
               </p>
               <ul className="list-disc text-left mt-2">
-                <li>Pre-built work processes – Just plug-and-play</li>
-                <li>Pay-per-task based on SLAS</li>
+                <li>Comprehensive candidate analytics</li>
+                <li>Performance prediction models</li>
+                <li>Streamlined onboarding support</li>
+                <li>Guaranteed fit for your business</li>
               </ul>
             </div>
           </div>

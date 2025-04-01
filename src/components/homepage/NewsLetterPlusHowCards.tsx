@@ -4,7 +4,7 @@ const NewsLetterPlusHowCards: React.FC = () => {
     return (
         <div className="combined-container bg-black text-center py-10">
             {/* Section 1: Learn how we work */}
-            <div className="work-section mb-10">
+            {/* <div className="work-section mb-10">
                 <h2 className="text-2xl font-semibold text-gray-50">
                     Learn how <span className="text-purple-500">we work</span>
                 </h2>
@@ -27,7 +27,7 @@ const NewsLetterPlusHowCards: React.FC = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
 
             {/* Section 2: Mailing list subscription */}
             <div className="mailing-list-section">
