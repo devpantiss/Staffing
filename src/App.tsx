@@ -10,6 +10,7 @@ import SearchEnginePage from "./pages/SearchEnginePage"
 import JobDetails from "./components/SearchEnginePage/JobDetails";
 import Academics from "./pages/Academics";
 import JobListPage from "./pages/JobListingPage";
+import ApplicantTrackerPage from "./pages/ApplicantTrackerPage";
 
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
         <Route path="/job-details" element={<JobDetails />}/>
         <Route path="/academics" element={<Academics />}/>
         <Route path="/job-listings" element={<JobListPage />}/>
+
+
+        <Route path="/applicants" element={<ApplicantTrackerPage />}/>
       </Routes>
       <Footer />
       </Router>

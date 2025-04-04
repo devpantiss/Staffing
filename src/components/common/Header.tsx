@@ -27,7 +27,7 @@ const Header: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 w-full bg-black z-50 shadow-glow">
       {/* Desktop Header */}
-      <div className="container mx-auto flex items-center justify-between py-4 px-6">
+      <div className="container mx-auto max-w-7xl flex items-center justify-between py-4 px-6">
         {/* Logo */}
         <div className="text-2xl font-extrabold flex items-center animate-pulse-logo">
           <span className="bg-gradient-to-r from-purple-600 to-purple-400 text-transparent bg-clip-text">

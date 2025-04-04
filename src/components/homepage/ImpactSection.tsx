@@ -10,7 +10,7 @@ const ImpactSection: React.FC = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Header Section */}
         <div className="lg:col-span-1 flex items-center">
-          <h2 className="text-4xl font-semibold leading-snug">
+          <h2 className="text-5xl font-semibold leading-snug">
             Making markets.<br />
             <span className="text-orange-400">Lifting Livelihoods.</span>
           </h2>
@@ -19,13 +19,12 @@ const ImpactSection: React.FC = () => {
         {/* Metrics Section */}
         <div className="lg:col-span-1 grid grid-cols-2 md:grid-cols-2 gap-8">
           {[
-            { value: 1000, label: 'Livelihoods' },
-            { value: 500, label: 'Skilled and Assessed' },
-            { value: 12, label: 'Years of Redefining Markets', suffix: '+' },
-            { value: 5000, label: 'Training Sites', suffix: '+' },
-            { value: 150, label: 'Livelihood Centres', suffix: '+' },
-            { value: 100, label: 'Happy Customers', suffix: '+' },
-            { value: 50, label: 'College B.Voc Programs', suffix: '+' },
+            { value: 7500, label: 'Counselled for TVET Program' },
+            { value: 9500, label: 'Trained & Certified' },
+            { value: 5000, label: 'Placed', suffix: '+' },
+            { value: 300, label: 'Mega Industries Connected', suffix: '+' },
+            { value: 1500, label: 'Nano Contractors Onboarded', suffix: '+' },
+            { value: 50, label: 'Revenue Generated', suffix: 'Cr+' },
           ].map((item, index) => (
             <div key={index} className="flex flex-col items-center">
               <h3 className="text-5xl font-extrabold text-orange-400">
