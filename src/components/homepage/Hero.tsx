@@ -58,7 +58,7 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <div className="relative mt-16 text-white h-[700px] overflow-hidden">
+    <div className="relative mt-16 text-white lg:h-[700px] overflow-hidden">
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
@@ -84,7 +84,7 @@ const HeroSection: React.FC = () => {
         <div className="lg:w-1/2 flex flex-col justify-center space-y-6 animate-fade-in">
           <h1 className="text-5xl lg:text-6xl font-bold text-center lg:text-left text-white leading-tight">
             Your Gateway to <br />
-            <span className="text-purple-400">Mines, Steel & Power Sector.</span>
+            <span className="text-orange-500">Mines, Steel & Power Sector.</span>
           </h1>
           <p className="text-lg text-gray-300 text-center lg:text-left">
             Explore Career Counseling, Tech Skilling, and India's First Job Search Engine for the Manufacturing Sector – All in One Place.
@@ -92,9 +92,9 @@ const HeroSection: React.FC = () => {
 
           {/* Lower Section: Key Features */}
           <h2 className="text-3xl lg:text-4xl font-bold text-center lg:text-left text-white">
-            Roam in <span className="text-purple-400">Mine, Steel & Power Skill Park</span> & Enjoy{" "}
-            <span className="text-purple-400">AR/VR</span>, Simulation & Real-Time Gigantic Machines Imported from{" "}
-            <span className="text-purple-400">Australia</span> & <span className="text-purple-400">Japan.</span>
+            Roam in <span className="text-orange-500">Mine, Steel & Power Skill Park</span> & Enjoy{" "}
+            <span className="text-orange-500">AR/VR</span>, Simulation & Real-Time Gigantic Machines Imported from{" "}
+            <span className="text-orange-500">Australia</span> & <span className="text-orange-500">Japan.</span>
           </h2>
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
             <Link to="/academics" className="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg shadow-lg transition-all">
