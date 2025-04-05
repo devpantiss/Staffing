@@ -6,7 +6,7 @@ import HeroSection from "../components/homepage/Hero";
 // import OverLappingCards from "../components/homepage/OverLappingCards";
 // import HowSection from "../components/homepage/HowSection";
 import OverLappingCards2 from "../components/homepage/OverLappingCards2";
-import ImpactSection from "../components/homepage/ImpactSection";
+// import ImpactSection from "../components/homepage/ImpactSection";
 // import TestimonialSection from "../components/homepage/TestimonialSection";
 // import NewsLetterPlusHowCards from "../components/homepage/NewsLetterPlusHowCards";
 // import HorizontalScrollComponent from "../components/homepage/HorizontalComponent";
@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
       <PlacementsSection />
       <EsteemedVisitors />
       {/* <OverLappingCards3 /> */}
-      <ImpactSection />
+      {/* <ImpactSection /> */}
       <CampusExperienceSection />
       <Ranking />
       {/* <CloudSection /> */}

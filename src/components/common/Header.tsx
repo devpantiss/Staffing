@@ -20,7 +20,7 @@ const Header: React.FC = () => {
   const navLinks: NavLink[] = [
     { name: "Home", path: "/" },
     { name: "Academics", path: "/academics" },
-    { name: "Jobs Engine", path: "/job-search-engine"},
+    { name: "Jobs Engine", path: "/job-search-engine" },
     { name: "Counselling", path: "/for-nano-contractors" },
   ];
 
@@ -28,12 +28,13 @@ const Header: React.FC = () => {
     <header className="fixed top-0 left-0 w-full bg-black z-50 shadow-glow">
       {/* Desktop Header */}
       <div className="container mx-auto max-w-7xl flex items-center justify-between py-4 px-6">
-        {/* Logo */}
-        <div className="text-2xl font-extrabold flex items-center animate-pulse-logo">
-          <span className="bg-gradient-to-r from-purple-600 to-purple-400 text-transparent bg-clip-text">
-            Skill
-          </span>
-          <span className="text-white">Net</span>
+        {/* Logo Image */}
+        <div className="flex items-center">
+          <img
+            src="https://res.cloudinary.com/dgtc2fvgu/image/upload/v1743853206/Pantiss_School-Photoroom_pq3crh.png" // Replace this with your actual logo path
+            alt="SkillNet Logo"
+            className="h-20 w-auto animate-pulse-logo"
+          />
         </div>
 
         {/* Navigation Links (Desktop) */}
