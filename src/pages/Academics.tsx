@@ -7,12 +7,14 @@ import QualityBanner from '../components/Academics/QualityBanner';
 import Hiring from '../components/Academics/Hiring';
 import HorizontalAccordion from '../components/Academics/HorizontalAccordian';
 import NewsLetterPlusHowCards from '../components/Academics/NewsLetter';
+import Why from '../components/Academics/Why';
 
 const Academics: React.FC = () => {
   return (
     <div>
         <HeroSection />
         <LifeAtSkillnet />
+        <Why />
         <HowToApply />
         <TrainingPrograms />
         <QualityBanner />

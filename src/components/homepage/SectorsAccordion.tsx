@@ -1,4 +1,4 @@
-import React, { memo, useState, useMemo } from "react";
+import React, { memo, useState, useMemo, useCallback } from "react";
 import { FaGem, FaIndustry, FaBolt, FaOilCan, FaShip } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -77,11 +77,21 @@ const SectorItem = memo(
 
     return (
       <div
+        role="tab"
+        aria-expanded={isActive}
+        aria-label={`Expand ${sector.title} sector`}
         className={`relative flex-1 transition-all duration-700 ease-in-out ${
           isActive ? "flex-[5]" : "flex-[1.2]"
         } cursor-pointer flex items-center justify-center overflow-hidden ${sector.color} border border-gray-700 [will-change:transform,flex]`}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            onMouseEnter();
+          }
+        }}
+        tabIndex={0}
       >
         <img
           src={sector.backgroundImage}
@@ -93,13 +103,13 @@ const SectorItem = memo(
         <div className="absolute inset-0 bg-black/30 z-10"></div>
 
         {!isActive && (
-          <div className="relative z-20 transform bg-black/80 p-4 rounded-md text-white -rotate-90 text-3xl font-extrabold tracking-wide uppercase opacity-80 transition-opacity duration-500">
+          <div className="relative z-20 transform bg-black/80 p-4 rounded-md text-white -rotate-90 text-3xl font-extrabold tracking-wide uppercase opacity-80 transition-opacity duration-500 [will-change:opacity,transform]">
             {sector.title}
           </div>
         )}
 
         {isActive && (
-          <div className="relative z-20 text-center p-8 bg-black/30 rounded-lg shadow-md transition-opacity duration-500 opacity-100">
+          <div className="relative z-20 text-center p-8 bg-black/30 rounded-lg shadow-md transition-opacity duration-500 opacity-100 [will-change:opacity]">
             <div className="flex justify-center mb-4">
               <IconComponent className="text-5xl text-white" />
             </div>
@@ -122,6 +132,23 @@ SectorItem.displayName = "SectorItem";
 
 const SectorsAccordion: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [timeoutId, setTimeoutId] = useState<ReturnType<typeof setTimeout> | null>(null);
+
+  // Memoized event handlers to prevent re-creation on re-renders
+  const handleMouseEnter = useCallback((index: number) => {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+      setTimeoutId(null);
+    }
+    setActiveIndex(index);
+  }, [timeoutId]);
+
+  const handleMouseLeave = useCallback(() => {
+    const id = setTimeout(() => {
+      setActiveIndex(null);
+    }, 200); // Add a slight delay to prevent flickering
+    setTimeoutId(id);
+  }, []);
 
   // Memoized accordion items
   const accordionItems = useMemo(() => {
@@ -130,11 +157,11 @@ const SectorsAccordion: React.FC = () => {
         key={sector.title}
         sector={sector}
         isActive={activeIndex === index}
-        onMouseEnter={() => setActiveIndex(index)}
-        onMouseLeave={() => setActiveIndex(null)}
+        onMouseEnter={() => handleMouseEnter(index)}
+        onMouseLeave={handleMouseLeave}
       />
     ));
-  }, [activeIndex]);
+  }, [activeIndex, handleMouseEnter, handleMouseLeave]);
 
   return (
     <section className="w-full flex justify-center py-16 bg-gradient-to-b from-black via-purple-900 to-black">
@@ -146,7 +173,11 @@ const SectorsAccordion: React.FC = () => {
           Delivering industry-specific expertise for impactful results at SkillNet.
         </p>
 
-        <div className="flex w-full h-[350px] sm:h-[400px] rounded-xl overflow-hidden shadow-2xl">
+        <div
+          role="tablist"
+          aria-label="Operating Sectors Accordion"
+          className="flex w-full h-[350px] sm:h-[400px] rounded-xl overflow-hidden shadow-2xl"
+        >
           {accordionItems}
         </div>
         <Link

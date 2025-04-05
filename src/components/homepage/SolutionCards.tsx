@@ -14,28 +14,28 @@ const programs: Program[] = [
   {
     title: "Skill Candor",
     image:
-      "https://res.cloudinary.com/dgtc2fvgu/image/upload/v1742316784/freepik__the-style-is-candid-image-photography-with-natural__18031_exrhs0.jpg", // Image representing transparency or skills
+      "https://res.cloudinary.com/dgtc2fvgu/image/upload/v1742316784/freepik__the-style-is-candid-image-photography-with-natural__18031_exrhs0.jpg",
     categories: ["Skill Development", "Training"],
     link: "/what-we-do/skill-candor",
   },
   {
     title: "Skill Mobilizers Connect",
     image:
-      "https://res.cloudinary.com/dgtc2fvgu/image/upload/v1742316572/freepik__make-a-image-showing-an-mobile-phone-inside-which-__18030_xe1ihz.jpg", // Image representing networking or connection
+      "https://res.cloudinary.com/dgtc2fvgu/image/upload/v1742316572/freepik__make-a-image-showing-an-mobile-phone-inside-which-__18030_xe1ihz.jpg",
     categories: ["Networking", "Career Growth"],
     link: "/what-we-do/skill-mobilizers-connect",
   },
   {
     title: "Skill Cafe",
     image:
-      "https://res.cloudinary.com/dgtc2fvgu/image/upload/v1740387857/7cf81b40-cb85-47b0-bc17-5ed47fa210ed_viwshh.jpg", // Image representing a casual, learning environment
+      "https://res.cloudinary.com/dgtc2fvgu/image/upload/v1740387857/7cf81b40-cb85-47b0-bc17-5ed47fa210ed_viwshh.jpg",
     categories: ["Learning Hub", "Community"],
     link: "/what-we-do/skill-cafe",
   },
   {
     title: "Blue Collars Foundry",
     image:
-      "https://res.cloudinary.com/dgtc2fvgu/image/upload/v1742126787/E-FvYHdVIAYEXa9_efneu2.webp", // Image representing industrial or blue-collar work
+      "https://res.cloudinary.com/dgtc2fvgu/image/upload/v1742126787/E-FvYHdVIAYEXa9_efneu2.webp",
     categories: ["Blue Collar Skills", "Workforce Training"],
     link: "/what-we-do/blue-collars-foundry",
   },
@@ -48,22 +48,33 @@ interface ProgramCardProps {
 
 const ProgramCard = memo(
   ({ program }: ProgramCardProps) => {
-    // Preload image styles to avoid layout shift
-    const cardStyle: React.CSSProperties = {
-      backgroundImage: `url(${program.image})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-    };
-
     return (
       <Link
         to={program.link}
-        className="relative bg-cover bg-center h-[400px] ring-2 ring-white rounded-lg shadow-lg overflow-hidden group"
-        style={cardStyle}
+        className="relative bg-black h-[400px] ring-2 ring-white rounded-lg shadow-lg overflow-hidden group [will-change:transform] focus:outline-none focus:ring-4 focus:ring-purple-500"
+        tabIndex={0}
       >
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center transition-opacity duration-300 ease-in-out"
+          style={{
+            backgroundImage: `url(${program.image})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <img
+            src={program.image}
+            alt={`${program.title} background`}
+            className="w-full h-full object-cover opacity-0"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-300 ease-in-out"></div>
+        <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent group-focus:bg-transparent transition-opacity duration-300 ease-in-out [will-change:opacity]"></div>
 
         {/* Categories */}
         <div className="absolute top-4 left-4 flex flex-wrap gap-2 z-10">
@@ -78,8 +89,8 @@ const ProgramCard = memo(
         </div>
 
         {/* Title and Line */}
-        <div className="absolute bottom-6 left-6 right-6 text-white group-hover:text-purple-600 transition-colors duration-300 ease-in-out z-10">
-          <hr className="border-t border-4 border-white/80 mb-3 w-12 group-hover:border-purple-600 transition-colors duration-300 ease-in-out" />
+        <div className="absolute bottom-6 left-6 right-6 text-white group-hover:text-purple-600 group-focus:text-purple-600 transition-colors duration-300 ease-in-out z-10">
+          <hr className="border-t border-4 border-white/80 mb-3 w-12 group-hover:border-purple-600 group-focus:border-purple-600 transition-colors duration-300 ease-in-out [will-change:border-color]" />
           <h3 className="text-start text-2xl md:text-3xl font-semibold leading-tight">
             {program.title}
           </h3>
@@ -91,12 +102,11 @@ const ProgramCard = memo(
 );
 ProgramCard.displayName = "ProgramCard";
 
-const Programs = () => {
+const Programs: React.FC = () => {
   // Memoized programs array
   const programList = useMemo(() => programs, []);
 
   return (
-    // bg-gradient-to-b from-black via-purple-900 to-black
     <section className="py-12 bg-black">
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         {/* Heading */}
@@ -117,4 +127,4 @@ const Programs = () => {
   );
 };
 
-export default memo(Programs, () => true); // Prevent re-render unless props change (none here)
+export default memo(Programs, () => true);

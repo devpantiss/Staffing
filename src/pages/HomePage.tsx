@@ -20,6 +20,7 @@ import PlacementsSection from "../components/homepage/PlacementsSection";
 import CampusExperienceSection from "../components/homepage/CampusExperienceSection";
 import Ranking from "../components/homepage/Ranking";
 import ExplorePrograms from "../components/homepage/ExplorePrograms";
+import EsteemedVisitors from "../components/homepage/EsteemedVisitors";
 
 const HomePage: React.FC = () => {
   return (
@@ -36,6 +37,7 @@ const HomePage: React.FC = () => {
       {/* <WhySection /> */}
       <FleetSection />
       <PlacementsSection />
+      <EsteemedVisitors />
       {/* <OverLappingCards3 /> */}
       <ImpactSection />
       <CampusExperienceSection />
