@@ -81,12 +81,12 @@ const LifeAtSkillnet: React.FC = () => {
       </div>
 
       {/* Apply Now Button (Floating on the Right) */}
-      <a
+      {/* <a
         href="#apply"
         className="fixed right-0 top-1/2 transform -translate-y-1/2 bg-red-600 text-white font-semibold py-3 px-6 rounded-l-lg hover:bg-red-700 transition"
       >
         Apply Now
-      </a>
+      </a> */}
     </section>
   );
 };

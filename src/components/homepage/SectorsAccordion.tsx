@@ -41,7 +41,7 @@ const sectorData: Sector[] = [
       "https://res.cloudinary.com/dgtc2fvgu/image/upload/v1743679033/shahnawaz-shamim-rbiknJHleHI-unsplash_jt41sl.jpg",
   },
   {
-    title: "Hydrocarbon & Petrochemicals",
+    title: "Hydrocarbons",
     color: "bg-red-700",
     description:
       "Expertise in refining, processing, and safety for oil, gas, and chemical sectors.",

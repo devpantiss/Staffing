@@ -129,7 +129,7 @@ const TrainingPrograms: React.FC = () => {
       {/* Apply Now Button (Fixed on the right) */}
       <a
         href="#apply"
-        className="fixed right-0 top-1/2 transform -translate-y-1/2 bg-orange-600 text-white px-4 py-2 rounded-l-lg text-sm font-semibold hover:bg-orange-700 transition-colors duration-300"
+        className="fixed right-0 top-1/2 transform z-50 -translate-y-1/2 bg-orange-600 text-white px-4 py-2 rounded-l-lg text-xl font-semibold hover:bg-orange-700 transition-colors duration-300"
       >
         Apply Now
       </a>

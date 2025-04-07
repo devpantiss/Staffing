@@ -8,6 +8,7 @@ import Hiring from '../components/Academics/Hiring';
 import HorizontalAccordion from '../components/Academics/HorizontalAccordian';
 import NewsLetterPlusHowCards from '../components/Academics/NewsLetter';
 import Why from '../components/Academics/Why';
+import Impact from '../components/Academics/Impact';
 
 const Academics: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const Academics: React.FC = () => {
         <Why />
         <HowToApply />
         <TrainingPrograms />
+        <Impact />
         <QualityBanner />
         <Hiring />
         <HorizontalAccordion />

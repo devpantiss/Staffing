@@ -83,12 +83,12 @@ const QualityBanner: React.FC = () => {
       </div>
 
       {/* Floating Apply Now Button */}
-      <a
+      {/* <a
         href="#apply"
         className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-red-500 text-white font-bold py-2 px-4 rounded-l-lg rotate-90 z-20"
       >
         Apply Now
-      </a>
+      </a> */}
     </section>
   );
 };

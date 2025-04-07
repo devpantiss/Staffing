@@ -119,7 +119,7 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
 
       {/* Main Content */}
-      <div className="relative flex mx-auto max-w-7xl flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12 px-8 py-16">
+      <div className="relative flex mx-auto max-w-7xl flex-col md:flex-row items-center justify-center gap-y-8 md:gap-y-0 md:gap-x-12 px-8">
         {/* Text Section */}
         <div className="lg:w-1/2 flex flex-col justify-center space-y-6 animate-fadeIn">
           <h1 className="text-5xl lg:text-6xl font-bold text-center lg:text-left text-white leading-tight">
