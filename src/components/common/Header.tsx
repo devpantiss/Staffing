@@ -21,7 +21,7 @@ const Header: React.FC = () => {
     { name: "Home", path: "/" },
     { name: "Academics", path: "/academics" },
     { name: "Jobs Engine", path: "/job-search-engine" },
-    { name: "Counselling", path: "/for-nano-contractors" },
+    { name: "Counselling", path: "/career-counselling" },
   ];
 
   return (

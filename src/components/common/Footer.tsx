@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
 
         {/* Quick Links */}
         <div>
-          <h4 className="text-lg font-semibold text-white mb-4 border-b border-purple-700 pb-2">
+          <h4 className="text-lg font-semibold text-white mb-4 border-b border-orange-500 pb-2">
             Quick Links
           </h4>
           <ul className="space-y-2 text-sm">
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
 
         {/* Contact Info & Social Media */}
         <div>
-          <h4 className="text-lg font-semibold text-white mb-4 border-b border-purple-700 pb-2">
+          <h4 className="text-lg font-semibold text-white mb-4 border-b border-orange-500 pb-2">
             Contact Info
           </h4>
           <address className="not-italic text-sm leading-relaxed text-gray-300 mb-4">
@@ -110,7 +110,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="text-xs text-gray-400 space-x-2">
+          <div className="text-xs text-gray-100 space-x-2">
             <a href="#" className="hover:text-orange-500">Privacy Policy</a>
             <span>|</span>
             <a href="#" className="hover:text-orange-500">Terms of Service</a>
@@ -119,7 +119,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="mt-10 text-center text-sm text-gray-500 border-t border-purple-800 pt-4">
+      <div className="mt-10 text-center text-sm text-gray-200 border-t border-orange-500 pt-4">
         &copy; {new Date().getFullYear()} Pantiss Foundation. All rights reserved.
       </div>
     </footer>

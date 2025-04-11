@@ -11,6 +11,7 @@ import JobDetails from "./components/SearchEnginePage/JobDetails";
 import Academics from "./pages/Academics";
 import JobListPage from "./pages/JobListingPage";
 import ApplicantTrackerPage from "./pages/ApplicantTrackerPage";
+import CounsellingPage from "./pages/CounsellingPage";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="/for-nano-contractors" element={<NanoContractors />}/>
+        <Route path="/career-counselling" element={<CounsellingPage />}/>
         <Route path="/for-businesses" element={<Businesses />}/>
         <Route path="/for-workers" element={<Workers />}/>
         <Route path="/job-search-engine" element={<SearchEnginePage />}/>
