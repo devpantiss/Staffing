@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import { useParams } from "react-router-dom";
 
 // Define the Job interface for TypeScript
@@ -92,7 +93,7 @@ const JobDetails: React.FC = () => {
 
   return (
     <div className="min-h-screen relative bg-transparent mt-12 py-10">
-        {/* Background Video */}
+      {/* Background Video */}
       <video
         autoPlay
         loop
@@ -288,6 +289,9 @@ const JobDetails: React.FC = () => {
                 <div>
                   <strong>Address:</strong> {job.address}
                 </div>
+              </div>
+              <div className="px-2 py-4 bg-purple-600 mt-8 rounded-md text-center text-white hover:bg-purple-800">
+                <Link to="/applicants">View Applicants</Link>
               </div>
             </div>
           </div>
