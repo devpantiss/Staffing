@@ -34,9 +34,9 @@ export default function AuthPage() {
   const isEmployer = userType === "employer";
 
   const employerVideo =
-    "https://res.cloudinary.com/dgtc2fvgu/video/upload/v1742994033/12700136_1920_1080_30fps_zajh9b.mp4";
+    "https://res.cloudinary.com/dgtc2fvgu/video/upload/v1742999025/9310125-uhd_3840_2160_30fps_l4ievp.mp4";
   const seekerVideo =
-    "https://res.cloudinary.com/dgtc2fvgu/video/upload/v1742994000/16498883-hd_1920_1080_24fps_zb7mxr.mp4";
+    "https://res.cloudinary.com/dgtc2fvgu/video/upload/v1742998746/4474927-uhd_3840_2160_30fps_v7ypop.mp4";
 
   const descriptionText = isEmployer
     ? "Hire certified blue-collar talent for your mining operations — quick, verified, and reliable."
