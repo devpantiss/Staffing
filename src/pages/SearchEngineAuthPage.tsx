@@ -1,6 +1,30 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { FaUserTie, FaUserGraduate } from "react-icons/fa";
+
+interface DirectionProps {
+  direction: number;
+}
+
+const formVariants: Variants = {
+  initial: ({ direction }: DirectionProps) => ({
+    x: direction > 0 ? "100%" : "-100%",
+    opacity: 0,
+    position: "absolute",
+  }),
+  animate: {
+    x: 0,
+    opacity: 1,
+    position: "relative",
+    transition: { duration: 0.5 },
+  },
+  exit: ({ direction }: DirectionProps) => ({
+    x: direction < 0 ? "100%" : "-100%",
+    opacity: 0,
+    position: "absolute",
+    transition: { duration: 0.5 },
+  }),
+};
 
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true);
@@ -8,26 +32,6 @@ export default function AuthPage() {
 
   const toggleMode = () => setIsLogin((prev) => !prev);
   const isEmployer = userType === "employer";
-
-  const formVariants = {
-    initial: (direction: number) => ({
-      x: direction > 0 ? "100%" : "-100%",
-      opacity: 0,
-      position: "absolute",
-    }),
-    animate: {
-      x: 0,
-      opacity: 1,
-      position: "relative",
-      transition: { duration: 0.5 },
-    },
-    exit: (direction: number) => ({
-      x: direction < 0 ? "100%" : "-100%",
-      opacity: 0,
-      position: "absolute",
-      transition: { duration: 0.5 },
-    }),
-  };
 
   const employerVideo =
     "https://res.cloudinary.com/dgtc2fvgu/video/upload/v1742994033/12700136_1920_1080_30fps_zajh9b.mp4";
@@ -110,7 +114,7 @@ export default function AuthPage() {
                 </button>
               </div>
 
-              <AnimatePresence mode="wait" custom={isLogin ? 1 : -1}>
+              <AnimatePresence mode="wait" custom={{ direction: isLogin ? 1 : -1 }}>
                 {isLogin ? (
                   <motion.div
                     key="login"
@@ -118,7 +122,7 @@ export default function AuthPage() {
                     initial="initial"
                     animate="animate"
                     exit="exit"
-                    custom={1}
+                    custom={{ direction: 1 }}
                   >
                     <h2 className="text-3xl font-semibold mb-6 text-gray-50">Login</h2>
                     <form className="space-y-4">
@@ -150,7 +154,7 @@ export default function AuthPage() {
                     initial="initial"
                     animate="animate"
                     exit="exit"
-                    custom={-1}
+                    custom={{ direction: -1 }}
                   >
                     <h2 className="text-3xl font-semibold mb-6 text-gray-100">Sign Up</h2>
                     <form className="space-y-4">
